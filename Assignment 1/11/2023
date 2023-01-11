@@ -1,0 +1,63 @@
+#1.	Download you assignment from the following GitHub repository
+2.	Go to the website for Git documentation: https://git-scm.com/ , if you are using a Windows machine you will see the instructions for Git here:
+a.	Windows - https://git-scm.com/download/win
+b.	Mac download - https://git-scm.com/download/mac
+3.	Download and install Github desktop on your laptop: https://desktop.github.com/
+4.	Create a repository called MyRepo and publish it
+5.	Create a branch called TestBranch
+6.	Save the answers to the document and push the test branch to your repository
+7.	Add a README file to let the instructors know what you did
+
+
+Use the following videos to answer the following questions:
+
+https://www.youtube.com/watch?v=vR-y_2zWrIE&list=PLWKjhJtqVAbkFiqHnNaxpOPhh9tSWMXIF&index=1
+
+1.	What is Git and what does it do?
+Git is a version control software that allows you to save every change you make to code so that you can see older versions of a document.
+
+2.	How is Github different from Git?
+Github is a collaboration website that interacts with Git for the projects you create on Github.
+
+3.	What is a branch? Why is it useful?
+A branch allows you to copy your code into a new area, and functions like a sandbox for code. It allows you to make changes, try different things, and edit your work, without altering your main files of code until you decide to merge the new branch into the main branch.
+
+4.	What is a commit?
+A commit is similar to saving changes. It saves a snapshot of your repository. It introduces your changes to your repository.
+
+5.	What is a pull request?
+A pull request shows you and collaborators the changes between your branch and the branch you intend to merge to. After your work has been checked and the differences between the branches has been looked at, you can merge the branch you were working on into your main branch.
+
+6.	What is a fork? How would you find this to be useful?
+A fork is the process of cloning a repository from one profile to your personal profile. It works similarly to branching but is different because a branch stays under the ownership of the profile that originally had the repository. A fork can be useful because it can allow you to copy code templates for assignments and then allow you to edit it under your personal profile.
+
+7.	How do you clone a repository
+You can clone a repository from the command line with
+“git clone https://github.com/username/repository”. This clones the repository to your profile.
+More common Git commands for the command line include
+“git pull” -> brings changes that colleagues might have made into your repository
+“git branch feature-branch” -> creates a branch on your local machine
+“git checkout feature-branch” -> tells git that any commits are going to the branch you made
+“git status” -> returns the status of your branch compared to the main
+“git add index.html” -> git add tells git which files will be included in the next git commit
+“git commit” -> commits changes
+“git push” -> pushes changes from local device to remote repository. Think opposite of git pull.
+
+8.	How do you resolve merge conflicts?
+“git merge” is used to merge a branch that you were working on back to the main branch. Merge conflicts are when there is a difference in a line in a file that you are trying to merge back into the main branch. “git status” tells you in which files you have merge conflicts.
+ You resolve merge conflicts by opening the files in a text editor, and looking for the merge conflict markers shown below:
+“<<<<<<<<HEAD”
+“============”
+“>>>>>>>BRANCH A”
+Then decide which version of the file you want to keep and remove the merge conflict markers. Then save the changes and commit them. This tells Git that the merge conflict has been resolved.
+
+Additional notes:
+git rebase vs. git merge:
+	“git rebase” functions similar to “git merge”. The difference is that after using
+“git merge”, the history of the versions of your project will show the changes in the order that they were made, NOT when the changes were added back to the main branch. “git rebase” instead adds in history to when they were merged back from the working branch to the main branch.
+
+Undoing commits:
+	“git revert” does not actually remove old commit, instead creates new commit with changes from old commit reverted. Does not alter commit IDs which makes it the safest option
+	“git reset” is probably the best on local repository
+	“git commit-amend” doesn’t change commit history but instead alters the message added to a commit
+	“git cherry-pick” changes a commit ID, make a comment if this change goes to the remote repository
